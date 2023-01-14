@@ -53,7 +53,6 @@ dyn = {
   title = "Arietta"
   subtitle = "Op. 42 No. 5"
   composer=\markup { "Muzio Clementi" \small "(1752-1832)" }
-  % Do not display the default LilyPond footer for this book
   tagline = ##f
 }
 \score {
