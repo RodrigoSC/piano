@@ -14,8 +14,6 @@
   \context {
     \Score
     \override StaffGrouper.staff-staff-spacing.padding = #6
-    \override Fingering.font-name = #'"Emmentaler"
-    \override Fingering.font-size = #-3
   }
 }
 
@@ -38,7 +36,7 @@ lh = \relative c' {
   r4 c-1 | b g | c g | b g | r c |
   b g | c g | b8 [g b g] | c [g c g] | d'-1 [g,-4 d' g,] |
   c-1 [g c g] | b [g b g] | c4 bes | a f | g g |
-  c2 | r4 bes-2 | a-1  f-3  g-1  g, | c2 \fine
+  c2 | r4 bes | a  f  g-1  g,-5 | c2-2 \fine
 }
 
 dyn = {

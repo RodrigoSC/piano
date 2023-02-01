@@ -13,8 +13,6 @@
   \context {
     \Score
     \override StaffGrouper.staff-staff-spacing.padding = #5
-    \override Fingering.font-name = #'"Emmentaler"
-    \override Fingering.font-size = #-3
   }
 }
 

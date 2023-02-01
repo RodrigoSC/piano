@@ -1,6 +1,10 @@
 \documentclass{article}
 \usepackage[margin=1in]{geometry}
+\usepackage{tikz}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
 \pagenumbering{gobble}
+\usepackage{graphics}
 \begin{document}
 
 \centerline{\huge Exercícios de Piano}
@@ -34,10 +38,47 @@
 \end{tabular}
 
 \section*{Hanon}
-\begin{tabular}{c c c c c c c c c c c c c}
-    & Dó & Mi & Fá & Sol & Lá & Sol & Fá & Mi & Ré & Fá & $\cdots$ & Dó \\
- MD & 1 & 2 & 3 & 4 & 5 & 4 & 3 & 2 & 1 & 2 & $\cdots$ & 1 \\ 
- ME & 5 & 4 & 3 & 2 & 1 & 2 & 3 & 4 & 5 & 4 & $\cdots$ & 5
+\begin{tabular}{*{12}{c}}
+    & Dó & Mi & Fá & Sol & Lá & Sol & Fá & Mi & Ré & Fá & $\cdots$ \\
+ MD & 1 & 2 & 3 & 4 & 5 & 4 & 3 & 2 & 1 & 2 & $\cdots$ \\ 
+ ME & 5 & 4 & 3 & 2 & 1 & 2 & 3 & 4 & 5 & 4 & $\cdots$ \\
+ \newline
 \end{tabular}
+
+\noindent Saltar o Dó, antes da descida. Finalizar com início em Sol, acabando em Dó.
+
+\section*{Escala do Tiago}
+\begin{tabular}{*9{c}}
+   & Dó & Ré & Mi & Fá & Ré & Mi & Fá & $\cdots$ \\
+MD & 1  & 2  & 3  & 4  & 1  & 2  & 3  & $\cdots$ \\ 
+ME & 4  & 3  & 2  & 1  & 4  & 3  & 2  & $\cdots$ \\
+\newline
+\end{tabular}
+
+\noindent Repetir com dedos 2, 3, 4, 5 para MD e 5, 4, 3, 2 para ME.
+
+\section*{Acordes}
+Tocar os acordes nas 3 formas na escala de dó.\\
+
+\begin{tabular}{r *3{c}}
+ Estado Fundamental & \circled{1} & 2 & 4 \\
+ 1$^a$ Inversão        & 1 & 2 & \circled{5} \\
+ 2$^a$ Inversão        & 1 & \circled{3} & 5 \\
+\end{tabular}
+ 
+\noindent \circled{$x$} $\rightarrow$ Tónica
+
+\section*{Inversões}
+\setlength{\tabcolsep}{1.5em}
+{\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{*4{c}}
+    C & A- & D- & G \\
+    \hline
+    E.F. & 1$^a$ Inv & E.F. & 2$^a$ Inv \\
+    1$^a$ Inv & 2$^a$ Inv & 1$^a$ Inv & E.F. \\
+    2$^a$ Inv & E.F. & 2$^a$ Inv & 1$^a$ Inv \\
+\end{tabular}}
+   
+
 
 \end{document}
