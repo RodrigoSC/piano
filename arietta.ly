@@ -24,8 +24,8 @@ rh = \relative c'' {
 
   c4-1 e8-3 g | g (f) f4 | e g8 e | e (d) d4 | c e8 g |
   g (f) f f | f [(e g e)] | d4 r | e r | f r |
-  f8 [(e g e)] | e (d) d4 | c e8 g | g-4 [(f a f)] | f [(e) e-3 (d)] |
-  dis4 (e) | c-1 e8 g | g-4 [(f a f)] | e4 e16-3 (d c d) | c2 \fine
+  f8 [(e g e)] | e (d) d4 | c e8 g | g-4 [(f a f)] | f [(e) e (d)] |
+  dis4-2 (e-3) | c-1 e8 g | g-4 [(f a f)] | e4 e16-3 (d c d) | c2 \fine
 }
 
 lh = \relative c' {

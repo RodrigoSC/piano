@@ -1,6 +1,7 @@
 \documentclass{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{tikz}
+\usepackage{amssymb}
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{
             \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
 \pagenumbering{gobble}
@@ -77,8 +78,16 @@ Tocar os acordes nas 3 formas na escala de dó.\\
     E.F. & 1$^a$ Inv & E.F. & 2$^a$ Inv \\
     1$^a$ Inv & 2$^a$ Inv & 1$^a$ Inv & E.F. \\
     2$^a$ Inv & E.F. & 2$^a$ Inv & 1$^a$ Inv \\
+    \\
 \end{tabular}}
-   
 
+\section*{Ciclo de 4$^{as}$}
+\setlength{\tabcolsep}{0.5em}
+\begin{tabular}{*7{c}}
+    E.F. & $\rightleftarrows$ & 2$^a$ Inv & & 2$^a$ Inv & $\rightleftarrows$ & E.F. \\
+    1 2 4 &                     & 1 3 5   & & 1 2 5 &                        & 1 3 5  \\
+    \\
+    C -- F & B -- E & A -- D & G -- C & $\cdots$ \\ 
+\end{tabular}
 
 \end{document}
