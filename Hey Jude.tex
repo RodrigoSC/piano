@@ -1,0 +1,89 @@
+\documentclass{article}
+\usepackage[chorded]{songs}
+\usepackage{tikz}
+
+\pagenumbering{gobble}
+\newcommand{\markerColor}{red}
+\newcommand{\pianochord}[2]{
+    \begin{tikzpicture}[scale=0.2]
+        % Chord name (centered, sans-serif, bold)
+        \node[font=\sffamily, align=center] at (5, 4.7) {\textbf{#1}};
+        
+        % Draw white keys
+        \foreach \x in {0,...,10} {
+            \draw[fill=white] (\x,0) rectangle (\x+1,3.5);
+        }
+        
+        % Draw black keys
+        \foreach \x in {0,1,2,4,5,7,8,9} {
+            \draw[fill=black] (\x+0.7,1.5) rectangle (\x+1.3,3.5);
+        }
+        
+        % Mark pressed keys
+        \foreach \key in {#2} {
+            \ifnum\key<0
+                \renewcommand{\markerColor}{white}
+                \def\r{0.25}
+                \def\y{2}
+                \def\x{0-\key}
+            \else
+                \renewcommand{\markerColor}{black}
+                \def\r{0.3}
+                \def\y{0.5}
+                \def\x{\key + 0.5}
+            \fi
+            \fill[\markerColor] (\x, \y) circle (\r);
+        }
+    \end{tikzpicture}
+}
+
+\noversenumbers
+\nosongnumbers
+\songcolumns{1} % Single column layout
+\setlength{\sbarheight}{0pt} % Remove lines
+\renewcommand{\printchord}[1]{\bfseries\sffamily\small #1}
+\renewcommand{\lyricfont}{}
+\renewcommand{\stitlefont}{\centering\sffamily\LARGE}
+\renewcommand{\showauthors}{\centering\sffamily\small \songauthors}
+\versesep=18pt plus 2pt minus 2pt
+\baselineadj=3pt plus 1pt minus 0pt
+
+\begin{document}
+
+\begin{songs}{}
+\beginsong{Hey Jude}[by={The Beatles}]
+
+\pianochord{F}{0,2,4}
+\pianochord{C}{1,4,6}
+\pianochord{C7}{1,-3,4,6}
+\\
+\vspace{0.2cm}
+\pianochord{Bb}{-3,4,6}
+\pianochord{F7}{0,2,4,-6}
+\vspace{1cm}
+
+\beginverse
+Hey \[F]Jude, don't make it \[C]bad,
+Take a \[C7]sad song and make it \[F]better.
+Re\[B&]member to let her into your \[F]heat,
+Then you can \[C7]start to make it bet\[F]ter.
+\endverse
+\beginverse
+Hey Jude, don't be a\[C]fraid,
+You were made \[C7]to go out and \[F]get her.
+The \[B&]minute you let her under your \[F]skin,
+Then you be\[C7]gin to make it bet\[F]ter. \[F7]
+\endverse
+\beginverse
+And anytime you feel the \[B&]pain,
+Hey \[B&/A]Jude, re\[B&/G]frain
+Don't \[B&/G]carry the wor\[C7]ld upon your sh\[F]oulders.
+For well you know that it's a \[B&]fool
+Who \[B&/A]plays it \[B&/G]cool
+By \[B&/F]making his \[C]world a little \[F]colder.
+Na na na \[F]na na, \[C7]na na na na.
+\endverse
+\endsong
+\end{songs}
+
+\end{document}
